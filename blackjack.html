@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>BlackJack</title>
+    <script type="text/javascript" src="blackjack.js"></script>
+    <!--<script type="text/javascript" src="jquery-ui.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="intro" style="display: inline-block; vertical-align: top;">
+        <h1>Welcome to BlackJack!</h1><br>
+        <a href="#" onClick="game();"><button class="disabled_button">Start Game</button></a>
+
+        <a href="#" onClick="deck1.shuffle();"><button type="button" disabled class="enabled_button">Shuffle Deck</button></a>
+        <a href="#" onClick="deck1.reset();"><button type="button" disabled class="enabled_button">Reset Deck</button></a>
+        <a href="#" onClick="draw_card();"><button type="button" disabled class="enabled_button">Hit</button></a>
+        <a href="#" onClick="next_turn();"><button type="button" disabled class="enabled_button">Stay</button></a>
+        <a href="#" onClick="location.reload();"><button type="button" disabled class="enabled_button">New Game</button></a>
+        <p>A simple game of BlackJack. Players compete to get to 21! In this version, aces are valued at 11.</p>
+        <h3 style="text-decoration: underline">Activity Log</h3>
+        <ul class="activity">
+
+        </ul>
+    </div>
+
+    <!--<img src="images/2_of_clubs.png" style = "width: 5%;height: 5%;">-->
+
+    <div id="control_buttons" style="display: inline-block; width: 100px; padding: 50px;">
+
+
+    </div>
+    <div id="winners_slot" style="display: inline-block;"></div>
+
+    <div id="players" style="display: inline-block; vertical-align: top;">
+        <div id="title">
+            <h1>PLAYERS</h1>
+        </div>
+    </div>
+
+
+</body>
+</html>
