@@ -1,38 +1,285 @@
-// Blackjack
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////       Blackjack: A game built in vanilla js.
+////
+////
+////       UNIT TESTING: To turn on unit testing, change the test_running variable to TRUE; Tests will be run and
+////        shown in the console. Scroll down to view the unit testing 
+////        function and see what parameters it takes and what default variables it creates. 
+////
+        var test_running = false;
+////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////  UNIT TEST: To use unit test, change the test_running variable to true (above).  Test automatically
+////  creates 4 players and a dealer with a fresh deck. Change test_running to false to turn off testing
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function unit_test(function1, expected, name_of_test, times, arguments){
+    window.alert = function() {};
+    if(test_running === true){
+
+        // DEFAULT VARIABLES TO TEST CASES
+        num_players = 5;
+        counter = 1;
+        var length1 = times;
+
+        //Used to test the calculate_winner function. Lose key values are set at real settings.
+        players = [ 0, player = {hand: ['five_heart'], hand_value: 5, lose: false, name: "Joshua"}, player = {hand: ['five_spades', "ten_heart", "jack_clubs"], hand_value: 25, lose: true, name: "Sophia"}, player = {hand: ['nine_diamonds', 'six_clubs'], hand_value: 15, lose: false, name: "Esther"}, player = {hand: ['king_clubs', 'ace_heart'], hand_value: 21, lose: false, name: "Paul"}]
+
+        //Used to test the check_lose function. lose key values are all set to false.
+        players2 = [ 0, player = {hand: ['five_heart'], hand_value: 5, lose: false, name: "Joshua"}, player = {hand: ['five_spades', "ten_heart", "jack_clubs"], hand_value: 25, lose: false, name: "Sophia"}, player = {hand: ['nine_diamonds', 'six_clubs'], hand_value: 15, lose: false, name: "Esther"}, player = {hand: ['king_clubs', 'ace_heart'], hand_value: 21, lose: false, name: "Paul"}]
+
+        var test_result = "PASSED"
+
+      
+        
+            for(var i=1; i<length1+1; i++){
+                if(arguments){
+                    // console.log(arguments[i-1]);
+                    if(function1(arguments[i-1]) === expected[i-1]){
+
+                    }
+                }
+                else if(function1() === expected[i-1]){
+
+                }
+                else{
+                    test_result = "FAILED";
+                }
+            }
+            console.log(name_of_test + " : " + test_result);
+        
+
+    }
+    else{
+        console.log("TESTING IS TURNED OFF");
+    }
+   
+}
+
+
+
+//Diplays in the console instructions for running unit test and unit test status. 
+function display1(){
+    if(test_running){
+        console.log("Unit Testing is Running. Please Set Unit testing to 'false' to play the game.")
+        console.log("PLEASE START GAME TO SEE Button Switch Unit Test")
+    }
+    else{
+        console.log("Unit Testing is turned off and application is running in game mode. Please set Unit testing to 'true' to see unit tests of functions.")
+    }
+}
+
+display1();
+
+
+///////////////////////////////////////////// END UNIT TEST //////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////  Global Variables  //////////////////////////////////////////////////
+
+//Default game Deck
 var deck1;
+
+//Array that keeps track of players. New players are pushed into this array. 0 is a placeholder for the zero index.
+var players = [0];
+var players2 = [0];
+
+//Counter keeps track of which players turn it is.
+var counter = 1;
+
+//Var to keep track of the number of players
+var num_players = 0;
+
+//Global length variable for testing.
+var length1;
+////////////////////////////////////    End Global Variables    ///////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////    FUNCTIONS    ///////////////////////////////////////////////////////
+
+
 
 //Disables the start game button after start and enables the rest of the game control buttons.
 function able_switch(){
     $(".disabled_button").prop("disabled",true);
     $(".enabled_button").prop("disabled",false);
+    var status = false;
+    var disabled = document.getElementsByClassName("disabled_button");
+    var enabled = document.getElementsByClassName("enabled_button");
+    for(var i=0; i<disabled.length; i++){
+        if(disabled[0].disabled){
+            status = true;
+            // console.log("true1")
+        }
+        else{
+            return false;
+            // console.log("false1")
+        }
+    }
+    for(var j=0; j<enabled.length; j++){
+        if(enabled[0].disabled){
+            return false;
+            // console.log("false2")
+        }
+        else{
+            status = true;
+            // console.log("true2")
+        }
+    }
+    return status;
 }
 
+//able switch test is on or near line 366
 
 
 //Cycles the turn to the next player. If the last player hits this function,
 // it invokes the function to calculate the winner
 
 function next_turn(){
-
+    //if its the last player's turn, it will invoke the calculate winner function.
     if(counter === num_players){
-        //counter = 1;
-        //alert("It is " + players[counter].name +"'s turn.");
         calculate_winner();
+        var calculation = "calculating winner"
+        return(calculation);
     }
+
+    //Logic for dealer drawing cards. Automatically draws two cards. Dealer holds on 17.
+    if(counter === num_players -1){
+        counter++;
+        var dealer_draw = function(){
+            players[counter].draw(deck1);
+        }
+        dealer_draw();
+        dealer_draw();
+        while(players[counter].hand_value < 17){
+            setTimeout( dealer_draw(), 8000 );
+        }
+        if(players[counter].hand_value > 21){
+            players[counter].lose = true;
+        }
+        next_turn();
+
+    }
+    //Skip to next players turn
     else{
         counter++;
+        // console.log("here " + players[counter]['name']);
         alert("It is " + players[counter].name +"'s turn.");
+        return(players[counter]['name']);
     }
 
 };
 
-//Array that keeps track of players. New players are pushed into this array. 0 is a placeholder for the zero index.
-var players = [0];
+unit_test(next_turn, ["Sophia", "Esther", "Paul"], "next_turn", 3);
 
-//counter keeps track of which players turn it is.
-var counter = 1;
 
-var num_players = 0;
+
+
+//Check if a player has lost and automatically skips to the next players turn if they have.
+//1. Checks if the players hand is over 21. If it is your turn, skips your turn and moved on and
+//2. Appends lost status to activity.
+//3. Automatically call the next_turn function. 
+function check_lose(player){
+    // console.log("player: " + player);
+    // console.log(players)
+    if(player['hand_value'] > 21){
+        player.lose = true;
+    }
+    if(player.lose === true){
+        $( "#"+player.name+"_score" ).html( "YOU LOST! - Hand Value: "+player.hand_value+"" );
+        $(".activity").append("<li>" + player.name + " LOST!!!</li>");
+        next_turn();
+        return true;
+    }
+    else if(player.lose === false){
+        return false;
+    }
+}
+
+unit_test(check_lose, [false, true, false, false], "check_lose", 4, [players2[1], players2[2], players2[3], players2[4]]);
+// function unit_test(function1, expected, name_of_test, times, arguments)
+
+
+
+
+////Calculates the highest score among people who have not gone over 21
+function calculate_winner(){
+    var num_max = 0;
+    var max = 0;
+    var winner;
+    var ties = [];
+    var ands = [""];
+
+    // forEach(1, players, function(players){
+    //     if(players.hand_value > max && players.lose === false){
+    //             max = players.hand_value;
+    //             winner = players.name;
+    //         }
+    // });
+    for(var i=1; i<players.length; i++){
+        if(players[i].hand_value > max && players[i].lose === false){
+            max = players[i].hand_value;
+            winner = players[i].name;
+        }
+    }
+
+
+    // forEach(1, players, function(players){
+    //     if(players.hand_value === max){
+    //         ties.push(counter);
+    //         num_max += 1;
+    //         ands.unshift("<p style = 'text-align: center;'>&<p>");
+    //     }
+    // })
+    for(var j=1; j<players.length; j++){
+        if(players[j].hand_value === max){
+            ties.push(j);
+            num_max += 1;
+            ands.unshift("<p style = 'text-align: center;'>&<p>");
+        }
+    }
+    if(num_max === 1){
+        $( "#title").html( "<h1>PLAYERS - "+winner+" is the winner!!</h1>" );
+    //$("#winners_slot").append("<div>"+winner+" is the winner!!"+"</div>")
+    }
+    else{
+        $( "#title").html( "<h1>PLAYERS - " +num_max+ " Push: </h1>" );
+        for(var k=0; k<ties.length; k++){
+            $( "#title").append("<h2 style = 'text-align: center;'> Player "+players[ties[k]].name+ " " + ands[k+1] +"</h2>");
+        }
+
+    }
+    return winner;
+    
+}
+
+unit_test(calculate_winner, ["Paul"], "calculate_winner", 1);
+
+function draw_card(){
+    players[counter].draw(deck1);
+    // console.log(players[counter].name);
+    check_lose(players[counter]);
+
+}
+/////////////////////////////////////////    END FUNCTIONS    ////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////    CONSTRUCTORS    /////////////////////////////////////////////////
+
+
 
 //Creating a new Deck
 var deck = function(){
@@ -59,7 +306,10 @@ var deck = function(){
         for(var i=0; i<this.reset_cards.length; i++){
             this.cards.push(this.reset_cards[i]);
         }
+        return (this.cards);
     };
+
+
     //deal card function. Takes in a player as the argument
     this.deal = function(argument){
         $(".activity").append("<li>" + players[counter].name +" drew a "+ this.cards[0] +"</li>");
@@ -99,6 +349,9 @@ var player = function(name){
     this.hand_value = 0;
     this.lose = false;
 };
+
+
+
 //Draws a card from the deck used in argument and pushes the card into the current players hand
 player.prototype.draw = function(deck){
     deck.deal(this);
@@ -118,17 +371,25 @@ player.prototype.checkhand = function(deck){
 };
 
 
-function draw_card(){
-    players[counter].draw(deck1);
-    console.log(players[counter].name);
-    check_lose(players[counter]);
 
+
+var dealer = {
+    create_dealer : function(){
+        var firstname = "Dealer";
+        var firstname_score = "Dealer_score"
+        num_players += 1;
+        players.push("Dealer")
+        players[num_players] = new player("Dealer");
+        $(".activity").append("<li> Dealer joined the Game!</li>")
+        $('#players').append('<div id="' + firstname + '"><h3>' + firstname + '</h3><div id="' + firstname_score + '">Hand Value: 0</div></div>');
+    }
 }
-
 
 
 //Invokes the start of the game. Creates players. Creates a new deck.
 var game = function(){
+
+
 
     deck1 = new deck();
     num_players_1 = prompt("Welcome to Blackjack! How many players (1-4) do we have?");
@@ -149,42 +410,15 @@ var game = function(){
 
         }
         able_switch();
-    }
-    //alerts user to how to call their character manually in console.
+        dealer.create_dealer();
 
-    //for(var j=1; j<players.length;j++){
-    //    alert(players[j].name + " is players["+j+"]" );
-    //}
+        /////able_switch test
+        unit_test(able_switch, [true], "able_switch", 1)
+
+    }
 };
-
-//Check if a player has lost and automatically skips to the next players turn if they have.
-function check_lose(player){
-    if(player.hand_value > 21){
-        player.lose = true;
-
-    }
-    if(player.lose === true){
-        $( "#"+player.name+"_score" ).html( "YOU LOST! - Hand Value: "+player.hand_value+"" );
-        $(".activity").append("<li>" + player.name + " LOST!!!</li>");
-        next_turn();
-    }
-}
-
-//Calculates the highest score among people who have not gone over 21
-function calculate_winner(){
-    var max = 0;
-    var winner;
-    for(var i=1; i<players.length; i++){
-        if(players[i].hand_value > max && players[i].lose === false){
-            max = players[i].hand_value;
-            winner = players[i].name;
-        }
-    }
-    $( "#title").html( "<h1>PLAYERS - "+winner+" is the winner!!</h1>" );
-    //$("#winners_slot").append("<div>"+winner+" is the winner!!"+"</div>")
-}
-
-//noprotect
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
