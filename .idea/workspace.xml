@@ -2,81 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c1daf0b-cccc-4aae-a49c-cfc2fdca069c" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blackjack.js" afterPath="$PROJECT_DIR$/js/blackjack.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/d3.js" afterPath="$PROJECT_DIR$/js/d3.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/10_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/10_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/10_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/10_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/10_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/10_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/10_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/10_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/2_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/2_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/2_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/2_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/2_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/2_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/2_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/2_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/3_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/3_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/3_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/3_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/3_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/3_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/3_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/3_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/4_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/4_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/4_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/4_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/4_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/4_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/4_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/4_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/5_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/5_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/5_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/5_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/5_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/5_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/5_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/5_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/6_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/6_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/6_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/6_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/6_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/6_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/6_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/6_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/7_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/7_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/7_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/7_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/7_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/7_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/7_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/7_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/8_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/8_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/8_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/8_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/8_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/8_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/8_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/8_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/9_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/9_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/9_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/9_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/9_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/9_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/9_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/9_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/ace_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/ace_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/ace_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/ace_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/ace_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/ace_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/ace_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/ace_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/ace_of_spades2.png" afterPath="$PROJECT_DIR$/blackJackImg/ace_of_spades2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/black_joker.png" afterPath="$PROJECT_DIR$/blackJackImg/black_joker.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/jack_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/jack_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/jack_of_clubs2.png" afterPath="$PROJECT_DIR$/blackJackImg/jack_of_clubs2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/jack_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/jack_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/jack_of_diamonds2.png" afterPath="$PROJECT_DIR$/blackJackImg/jack_of_diamonds2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/jack_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/jack_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/jack_of_hearts2.png" afterPath="$PROJECT_DIR$/blackJackImg/jack_of_hearts2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/jack_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/jack_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/jack_of_spades2.png" afterPath="$PROJECT_DIR$/blackJackImg/jack_of_spades2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/king_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/king_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/king_of_clubs2.png" afterPath="$PROJECT_DIR$/blackJackImg/king_of_clubs2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/king_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/king_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/king_of_diamonds2.png" afterPath="$PROJECT_DIR$/blackJackImg/king_of_diamonds2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/king_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/king_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/king_of_hearts2.png" afterPath="$PROJECT_DIR$/blackJackImg/king_of_hearts2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/king_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/king_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/king_of_spades2.png" afterPath="$PROJECT_DIR$/blackJackImg/king_of_spades2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/queen_of_clubs.png" afterPath="$PROJECT_DIR$/blackJackImg/queen_of_clubs.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/queen_of_clubs2.png" afterPath="$PROJECT_DIR$/blackJackImg/queen_of_clubs2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/queen_of_diamonds.png" afterPath="$PROJECT_DIR$/blackJackImg/queen_of_diamonds.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/queen_of_diamonds2.png" afterPath="$PROJECT_DIR$/blackJackImg/queen_of_diamonds2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/queen_of_hearts.png" afterPath="$PROJECT_DIR$/blackJackImg/queen_of_hearts.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/queen_of_hearts2.png" afterPath="$PROJECT_DIR$/blackJackImg/queen_of_hearts2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/queen_of_spades.png" afterPath="$PROJECT_DIR$/blackJackImg/queen_of_spades.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/queen_of_spades2.png" afterPath="$PROJECT_DIR$/blackJackImg/queen_of_spades2.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/images/red_joker.png" afterPath="$PROJECT_DIR$/blackJackImg/red_joker.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/watchout.js" afterPath="$PROJECT_DIR$/js/watchout.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/portfolio/paphi_main.png" afterPath="$PROJECT_DIR$/img/portfolio/paphi_main.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/portfolio/rush1.png" afterPath="$PROJECT_DIR$/img/portfolio/rush1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blackjack.html" afterPath="$PROJECT_DIR$/blackjack.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/watchout.html" afterPath="$PROJECT_DIR$/watchout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Portfolio.iws" />
@@ -104,8 +30,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42479676" vertical-offset="6871" max-vertical-offset="10560">
-              <caret line="472" column="118" selection-start-line="472" selection-start-column="118" selection-end-line="472" selection-end-column="118" />
+            <state vertical-scroll-proportion="0.46981627" vertical-offset="2266" max-vertical-offset="10560">
+              <caret line="163" column="35" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -282,7 +208,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18624161" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18624161" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -474,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42479676" vertical-offset="6871" max-vertical-offset="10560">
-          <caret line="472" column="118" selection-start-line="472" selection-start-column="118" selection-end-line="472" selection-end-column="118" />
+        <state vertical-scroll-proportion="0.46981627" vertical-offset="2266" max-vertical-offset="10560">
+          <caret line="163" column="35" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
